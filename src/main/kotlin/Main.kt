@@ -1,11 +1,16 @@
+import com.github.mm.coloredconsole.colored
 
 fun main() {
 
     while (true) {
-        print("Enter the code: ")
-        val code: String = readLine().toString()
+        colored {
+            print("Enter the code: ".bold)
+            val code: String = readLine().toString().bold
 
-        println("Decoding: $code -> ${Decode(code, 1)}")
+            println("Decoding: $code -> ${Decode(code, 1)}")
+
+            print(code.green)
+        }
     }
 }
 
