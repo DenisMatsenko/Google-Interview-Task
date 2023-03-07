@@ -5,11 +5,10 @@ fun main() {
     while (true) {
         colored {
             print("Enter the code: ".bold)
-            val code: String = readLine().toString().bold
+            val code: String = readLine().toString()
 
-            println("Decoding: $code -> ${Decode(code, 1)}")
+            println("Decoding: ${code.green.bold} -> ${Decode(code, 1).yellow.bold}")
 
-            print(code.green)
         }
     }
 }
